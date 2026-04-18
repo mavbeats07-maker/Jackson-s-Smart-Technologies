@@ -27,6 +27,8 @@ nav {
     background: rgba(0,0,0,0.4);
     position: fixed;
     width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 nav a {
@@ -85,6 +87,54 @@ footer {
     padding: 20px;
     background: black;
 }
+
+/* CHAT BUTTON */
+#chatBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 16px;
+    background: #00c2ff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+/* CHATBOX */
+#chatbox {
+    display: none;
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    width: 300px;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    z-index: 2000;
+}
+
+#chatHeader {
+    background: #0a2a43;
+    color: white;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+}
+
+#chatMessages {
+    height: 250px;
+    overflow: auto;
+    padding: 10px;
+    font-size: 14px;
+}
+
+#chatInput {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-top: 1px solid #ccc;
+}
 </style>
 </head>
 
@@ -116,8 +166,7 @@ footer {
     <h2>Company Overview</h2>
     <p style="margin-top:20px;">
         JST is an innovative digital solutions company focused on enhancing security and 
-        access management in residential and commercial environments. We build smart, 
-        affordable, and scalable systems that improve safety and simplify operations.
+        access management in residential and commercial environments.
     </p>
 </section>
 
@@ -125,85 +174,99 @@ footer {
 <section class="section" id="solution">
     <h2>Our Solution</h2>
     <p style="margin-top:20px;">
-        The JST Visitor Access Control System is a cloud-based platform that allows residents 
-        to generate secure access codes for visitors, which are verified by security personnel 
-        at entry points in real-time.
+        Smart Visitor Access Control System using cloud-based verification and secure codes.
     </p>
 </section>
 
 <!-- HOW IT WORKS -->
 <section class="section">
     <h2>How It Works</h2>
-
     <div class="cards">
-        <div class="card">Residents generate a temporary access code</div>
-        <div class="card">Codes are securely stored in the cloud</div>
-        <div class="card">Security verifies codes at the gate</div>
-        <div class="card">Access granted if valid and not expired</div>
+        <div class="card">Residents generate access code</div>
+        <div class="card">Codes stored in cloud</div>
+        <div class="card">Security verifies at gate</div>
+        <div class="card">Access granted instantly</div>
     </div>
 </section>
 
 <!-- FEATURES -->
 <section class="section" id="features">
     <h2>Key Features</h2>
-
     <div class="cards">
-        <div class="card">Secure time-based access codes</div>
-        <div class="card">Automatic expiry system</div>
-        <div class="card">Works on phones and computers</div>
-        <div class="card">Firebase real-time syncing</div>
-        <div class="card">Visitor tracking system</div>
-        <div class="card">Reduced human error</div>
+        <div class="card">Secure time-based codes</div>
+        <div class="card">Firebase syncing</div>
+        <div class="card">Mobile friendly</div>
+        <div class="card">Visitor tracking</div>
     </div>
 </section>
 
 <!-- MARKET -->
 <section class="section" id="market">
     <h2>Target Market</h2>
-
     <div class="cards">
-        <div class="card">Residential complexes</div>
         <div class="card">Gated communities</div>
-        <div class="card">Estates & security villages</div>
+        <div class="card">Estates</div>
         <div class="card">Office parks</div>
-        <div class="card">Private properties</div>
+        <div class="card">Private homes</div>
     </div>
-</section>
-
-<!-- VISION -->
-<section class="section">
-    <h2>Vision & Mission</h2>
-    <p style="margin-top:20px;">
-        Our vision is to become a leading provider of smart security solutions across South Africa 
-        and beyond. Our mission is to deliver reliable, user-friendly systems that empower communities 
-        with smarter ways to manage security.
-    </p>
 </section>
 
 <!-- FUTURE -->
 <section class="section">
     <h2>Future Development</h2>
-
     <div class="cards">
-        <div class="card">Mobile App (iOS & Android)</div>
-        <div class="card">Facial Recognition</div>
-        <div class="card">QR Code Access</div>
-        <div class="card">AI Threat Detection</div>
+        <div class="card">Mobile App</div>
+        <div class="card">QR Access</div>
+        <div class="card">AI Detection</div>
         <div class="card">Analytics Dashboard</div>
     </div>
-    <!-- AI CHATBOX -->
-<div id="chatbox" style="position:fixed;bottom:20px;right:20px;width:300px;background:white;color:black;border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,0.3);">
+</section>
 
-<div style="background:#0a2a43;color:white;padding:10px;border-radius:10px 10px 0 0;">
-JST AI Assistant
-</div>
+<!-- CONTACT -->
+<section class="section" id="contact">
+    <h2>Contact</h2>
+    <p style="margin-top:20px;">📧 sivemganto1@gmail.com</p>
+    <p>📞 060 455 1670 / 066 367 0040</p>
+</section>
 
-<div id="chatMessages" style="height:250px;overflow:auto;padding:10px;font-size:14px;"></div>
+<footer>
+    <p>© 2026 JST – Jackson’s Smart Technologies</p>
+</footer>
 
-<input id="chatInput" placeholder="Type here..." style="width:100%;padding:10px;border:none;border-top:1px solid #ccc;">
+<!-- CHAT BUTTON -->
+<button id="chatBtn" onclick="toggleChat()">💬 AI Chat</button>
+
+<!-- CHATBOX -->
+<div id="chatbox">
+
+<div id="chatHeader">JST AI Assistant</div>
+
+<div id="chatMessages"></div>
+
+<input id="chatInput" placeholder="Type here...">
 </div>
 
 <script>
+
+/* SCROLL */
+function scrollToSection(id){
+    document.getElementById(id).scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+/* CHAT TOGGLE */
+function toggleChat(){
+    let box = document.getElementById("chatbox");
+
+    if(box.style.display === "none" || box.style.display === ""){
+        box.style.display = "block";
+    } else {
+        box.style.display = "none";
+    }
+}
+
+/* CHAT LOGIC */
 let step = 0;
 let houses = 0;
 
@@ -211,13 +274,13 @@ const messages = document.getElementById("chatMessages");
 const input = document.getElementById("chatInput");
 
 function bot(msg){
-messages.innerHTML += "<div><b>JST:</b> "+msg+"</div>";
-messages.scrollTop = messages.scrollHeight;
+    messages.innerHTML += "<div><b>JST:</b> " + msg + "</div>";
+    messages.scrollTop = messages.scrollHeight;
 }
 
 function user(msg){
-messages.innerHTML += "<div><b>You:</b> "+msg+"</div>";
-messages.scrollTop = messages.scrollHeight;
+    messages.innerHTML += "<div><b>You:</b> " + msg + "</div>";
+    messages.scrollTop = messages.scrollHeight;
 }
 
 bot("Hi 👋 Welcome to JST. How many houses are in your complex?");
@@ -239,51 +302,31 @@ return;
 let total = houses * 50;
 
 bot("✅ Quote Generated:");
-bot("Number of Houses: " + houses);
+bot("Houses: " + houses);
 bot("Price per house: R50");
-bot("Total Cost: R" + total);
-bot("Would you like installation included? (yes/no)");
+bot("Total: R" + total);
+bot("Installation? (yes/no)");
 
 step = 1;
 }
 
 else if(step === 1){
 if(val.toLowerCase() === "yes"){
-bot("Installation will be quoted separately based on location.");
+bot("Installation will be quoted separately.");
 } else {
 bot("No installation selected.");
 }
 
-bot("📞 Contact us: 060 455 1670");
-bot("📧 Email: sivemganto1@gmail.com");
-bot("Thank you for choosing JST 🚀");
+bot("📞 060 455 1670");
+bot("📧 sivemganto1@gmail.com");
+bot("Thank you 🚀");
 
 step = 2;
 }
 
 }
 });
-</script>
-</section>
 
-<!-- CONTACT -->
-<section class="section" id="contact">
-    <h2>Contact</h2>
-    <p style="margin-top:20px;">📧 sivemganto1@gmail.com</p>
-    <p>📞 060 455 1670 / 066 367 0040</p>
-    <p>📍 South Africa</p>
-</section>
-
-<footer>
-    <p>© 2026 JST – Jackson’s Smart Technologies</p>
-</footer>
-
-<script>
-function scrollToSection(id){
-    document.getElementById(id).scrollIntoView({
-        behavior: "smooth"
-    });
-}
 </script>
 
 </body>
