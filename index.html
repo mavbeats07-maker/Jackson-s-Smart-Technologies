@@ -1,386 +1,374 @@
-<!DOCTYPE html>
-<html lang="en">
+<section id="hero">
 
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<h1>JACKSON SMART TECHNOLOGIES</h1>
 
-<title>Jackson Smart Technologies (PTY) LTD</title>
+<h2>
+Smart Innovation. Intelligent Security. Digital Transformation.
+</h2>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<p>
+Advanced Smart Security Systems,
+AI Solutions,
+Software Development,
+Automation Platforms,
+Digital Monitoring Solutions.
+</p>
 
-<style>
-:root{
-    --primary:#0f172a;
-    --secondary:#111827;
-    --accent:#00d2ff;
-    --accent2:#2563eb;
-    --white:#ffffff;
-    --light:#f8fafc;
-    --gray:#94a3b8;
-    --card:#1e293b;
-    --success:#00ff99;
+<button>
+Book Consultation
+</button>
+
+<button>
+Request Demo
+</button>
+
+</section>
+<section id="about">
+
+<h2>About Jackson Smart Technologies</h2>
+
+<p>
+
+Jackson Smart Technologies (Pty) Ltd is a South African technology company focused on developing innovative digital solutions, smart security systems, automation platforms and modern community technology services.
+
+</p>
+
+</section>
+<section>
+
+<h2>Our Vision</h2>
+
+<p>
+
+To become one of Africa's leading smart technology and security solution providers.
+
+</p>
+
+</section>
+<section>
+
+<h2>Our Mission</h2>
+
+<ul>
+
+<li>Advanced Smart Security Solutions</li>
+
+<li>Affordable Digital Systems</li>
+
+<li>Improve Safety and Monitoring</li>
+
+<li>Drive Digital Innovation</li>
+
+<li>Build Trusted Partnerships</li>
+
+</ul>
+
+</section>
+<section>
+
+<h2>Core Values</h2>
+
+<div>
+
+Innovation
+
+Integrity
+
+Excellence
+
+Reliability
+
+Customer Satisfaction
+
+</div>
+
+</section>
+<div class="service">
+
+<h3>Smart Community Security</h3>
+
+<ul>
+
+<li>Visitor Management</li>
+
+<li>Digital Access Control</li>
+
+<li>Panic Alert Systems</li>
+
+<li>Incident Reporting</li>
+
+<li>Monitoring Dashboards</li>
+
+</ul>
+
+</div>
+<div class="service">
+
+<h3>Software Development</h3>
+
+<ul>
+
+<li>Web Applications</li>
+
+<li>Mobile Applications</li>
+
+<li>SaaS Platforms</li>
+
+<li>Cloud Systems</li>
+
+<li>Database Systems</li>
+
+</ul>
+
+</div>
+<div class="service">
+
+<h3>AI & Automation</h3>
+
+<ul>
+
+<li>Document Recognition</li>
+
+<li>Automation Systems</li>
+
+<li>Monitoring Intelligence</li>
+
+<li>AI Reporting</li>
+
+</ul>
+
+</div>
+<div class="service">
+
+<h3>AI & Automation</h3>
+
+<ul>
+
+<li>Document Recognition</li>
+
+<li>Automation Systems</li>
+
+<li>Monitoring Intelligence</li>
+
+<li>AI Reporting</li>
+
+</ul>
+
+</div>
+<div>
+
+CCTV Integration
+
+AI Recognition
+
+Live Monitoring
+
+Emergency Response
+
+</div>
+<div>
+
+Technology Strategy
+
+Business Automation
+
+Infrastructure Planning
+
+System Modernization
+
+</div>
+<section>
+
+<h2>
+JST Smart Community Security System
+</h2>
+
+<div>
+
+Resident Registration
+
+Visitor Management
+
+Panic Alerts
+
+Incident Reporting
+
+Access Control
+
+Community Communication
+
+Account Verification
+
+Subscription Management
+
+AI Scanning
+
+</div>
+
+</section>
+<section>
+
+Residential Communities
+
+Student Accommodations
+
+Security Companies
+
+Property Management
+
+Educational Institutions
+
+Government
+
+Commercial Properties
+
+Retail
+
+Startups
+
+</section>
+<section>
+
+Residential Communities
+
+Student Accommodations
+
+Security Companies
+
+Property Management
+
+Educational Institutions
+
+Government
+
+Commercial Properties
+
+Retail
+
+Startups
+
+</section>
+<form id="bookingForm">
+
+<input type="text" id="name">
+
+<input type="email" id="email">
+
+<input type="text" id="phone">
+
+<select id="service">
+
+<option>Security Consultation</option>
+
+<option>Software Development</option>
+
+<option>AI Solutions</option>
+
+<option>Community Security Demo</option>
+
+<option>IT Consulting</option>
+
+</select>
+
+<input type="date" id="date">
+
+<textarea id="message"></textarea>
+
+<button type="submit">
+
+Book Now
+
+</button>
+
+</form>
+const firebaseConfig = {
+
+apiKey: "YOUR_API_KEY",
+
+authDomain: "YOUR_PROJECT.firebaseapp.com",
+
+projectId: "YOUR_PROJECT_ID",
+
+storageBucket: "YOUR_PROJECT.appspot.com",
+
+messagingSenderId: "YOUR_MESSAGING_ID",
+
+appId: "YOUR_APP_ID"
+
+};
+const firebaseConfig = {
+
+apiKey: "YOUR_API_KEY",
+
+authDomain: "YOUR_PROJECT.firebaseapp.com",
+
+projectId: "YOUR_PROJECT_ID",
+
+storageBucket: "YOUR_PROJECT.appspot.com",
+
+messagingSenderId: "YOUR_MESSAGING_ID",
+
+appId: "YOUR_APP_ID"
+
+};
+{
+ "name":"",
+ "email":"",
+ "role":"user"
 }
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+{
+ "title":"",
+ "description":"",
+ "active":true
 }
-
-html{ scroll-behavior:smooth; }
-
-body{
-    background:var(--primary);
-    color:white;
-    overflow-x:hidden;
+{
+ "title":"",
+ "description":"",
+ "active":true
 }
-
-/* ================= NAVBAR ================= */
-nav{
-    position:fixed;
-    top:0;
-    width:100%;
-    z-index:1000;
-    background:rgba(15,23,42,0.9);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid rgba(255,255,255,0.05);
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px 7%;
+{
+ "name":"",
+ "description":"",
+ "image":""
 }
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:12px;
+{
+ "name":"",
+ "email":"",
+ "message":"",
+ "date":""
 }
+Total Bookings
 
-.logo-circle{
-    width:45px;
-    height:45px;
-    border-radius:50%;
-    background:linear-gradient(135deg,var(--accent),var(--accent2));
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-weight:700;
-    color:white;
-    font-size:18px;
-}
+Pending Bookings
 
-nav ul{
-    display:flex;
-    list-style:none;
-    gap:25px;
-}
+Completed Bookings
 
-nav a{
-    color:white;
-    text-decoration:none;
-}
+New Leads
+Edit Services
 
-/* ================= HERO ================= */
-.hero{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:120px 7% 80px;
-    background:
-        linear-gradient(rgba(2,6,23,0.8),rgba(2,6,23,0.9)),
-        url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600');
-    background-size:cover;
-}
+Edit Projects
 
-.hero h1{
-    font-size:65px;
-    line-height:1.1;
-}
+Edit Testimonials
 
-.hero h1 span{
-    color:var(--accent);
-}
+Edit Hero Content
 
-.hero p{
-    font-size:20px;
-    color:#cbd5e1;
-}
+Manage Users
+<section>
 
-/* ================= BUTTONS ================= */
-.btn{
-    padding:15px 30px;
-    border-radius:12px;
-    text-decoration:none;
-    font-weight:600;
-    display:inline-block;
-}
+<h2>Contact Us</h2>
 
-.btn-primary{
-    background:linear-gradient(135deg,var(--accent),var(--accent2));
-    color:white;
-}
+<p>
+JACKSON SMART TECHNOLOGIES (PTY) LTD
+</p>
 
-.btn-secondary{
-    border:1px solid white;
-    color:white;
-}
+<p>
+Registration Number:
+2026/320361/07
+</p>
 
-/* ================= SECTION ================= */
-.section{
-    padding:100px 7%;
-}
+<p>
+Centurion, Gauteng, South Africa
+</p>
 
-.section-title{
-    text-align:center;
-    margin-bottom:60px;
-}
-
-.section-title h2{
-    font-size:42px;
-}
-
-/* ================= ABOUT ================= */
-.about-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:30px;
-}
-
-.about-card{
-    background:var(--card);
-    padding:35px;
-    border-radius:20px;
-}
-
-/* ================= SERVICES ================= */
-.services{
-    background:#020617;
-}
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:25px;
-}
-
-.card{
-    background:var(--card);
-    padding:35px 25px;
-    border-radius:20px;
-}
-
-/* ================= SYSTEMS ================= */
-#systems .card{
-    text-align:left;
-}
-
-/* ================= BOOKING ================= */
-.booking-wrapper{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
-}
-
-.booking-form input,
-.booking-form textarea,
-.booking-form select{
-    width:100%;
-    padding:15px;
-    margin-bottom:18px;
-    border:none;
-    border-radius:10px;
-    background:#0f172a;
-    color:white;
-}
-
-/* ================= CONTACT ================= */
-.contact-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
-
-.contact-box{
-    background:var(--card);
-    padding:30px;
-    border-radius:20px;
-}
-
-/* ================= FOOTER ================= */
-footer{
-    padding:40px 7%;
-    background:black;
-    text-align:center;
-    color:#94a3b8;
-}
-
-/* ================= CHAT ================= */
-#chatBtn{
-    position:fixed;
-    bottom:25px;
-    right:25px;
-    width:65px;
-    height:65px;
-    border-radius:50%;
-    border:none;
-    background:linear-gradient(135deg,var(--accent),var(--accent2));
-    color:white;
-}
-
-#chatbox{
-    position:fixed;
-    right:25px;
-    bottom:100px;
-    width:360px;
-    background:white;
-    color:black;
-    display:none;
-}
-
-</style>
-</head>
-
-<body>
-
-<!-- NAV -->
-<nav>
-    <div class="logo">
-        <div class="logo-circle">JST</div>
-        <h2>Jackson Smart Technologies</h2>
-    </div>
-
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#systems">Systems</a></li>
-        <li><a href="#booking">Bookings</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-    <div>
-        <h1>
-            Smart Innovation.<br>
-            <span>Intelligent Security.</span><br>
-            Digital Transformation.
-        </h1>
-
-        <p>
-            Jackson Smart Technologies builds smart systems, AI tools, and software platforms.
-        </p>
-
-        <a href="#services" class="btn btn-primary">Explore Services</a>
-        <a href="#booking" class="btn btn-secondary">Book Consultation</a>
-    </div>
 </section>
 
-<!-- ================= ABOUT ================= -->
-<section class="section" id="about">
-    <div class="section-title">
-        <h2>About</h2>
-    </div>
-
-    <div class="about-grid">
-        <div class="about-card">
-            <h3>Vision</h3>
-            <p>Leading African smart technology provider.</p>
-        </div>
-
-        <div class="about-card">
-            <h3>Mission</h3>
-            <p>Affordable digital systems for businesses.</p>
-        </div>
-
-        <div class="about-card">
-            <h3>Technology</h3>
-            <p>AI, Cloud, SaaS, Automation, Security.</p>
-        </div>
-    </div>
-</section>
-
-<!-- ================= SERVICES ================= -->
-<section class="section services" id="services">
-    <div class="section-title">
-        <h2>Services</h2>
-    </div>
-
-    <div class="cards">
-        <div class="card">Smart Security Systems</div>
-        <div class="card">Software Development</div>
-        <div class="card">AI Automation</div>
-        <div class="card">Access Control</div>
-    </div>
-</section>
-
-<!-- ================= SYSTEMS ================= -->
-<section class="section" id="systems">
-    <div class="section-title">
-        <h2>Systems</h2>
-    </div>
-
-    <div class="cards">
-        <div class="card">Visitor Management</div>
-        <div class="card">Resident Accounts</div>
-        <div class="card">Panic Alerts</div>
-        <div class="card">Live Monitoring Dashboard</div>
-    </div>
-</section>
-
-<!-- ================= BOOKING ================= -->
-<section class="section booking" id="booking">
-    <div class="section-title">
-        <h2>Bookings</h2>
-    </div>
-
-    <div class="booking-wrapper">
-        <div class="card">
-            Book consultations and demos.
-        </div>
-
-        <div class="card booking-form">
-            <form id="bookingForm">
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="Email" required>
-                <input type="tel" placeholder="Phone" required>
-
-                <select>
-                    <option>Software</option>
-                    <option>Security</option>
-                    <option>AI</option>
-                </select>
-
-                <textarea placeholder="Message"></textarea>
-
-                <button class="btn btn-primary">Submit</button>
-            </form>
-        </div>
-    </div>
-</section>
-
-<!-- ================= CONTACT ================= -->
-<section class="section" id="contact">
-    <div class="section-title">
-        <h2>Contact</h2>
-    </div>
-
-    <div class="contact-grid">
-        <div class="contact-box">📍 Centurion</div>
-        <div class="contact-box">📞 060 455 1670</div>
-        <div class="contact-box">📧 sivemganto1@gmail.com</div>
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-© 2026 Jackson Smart Technologies (PTY) LTD
-</footer>
-
-</body>
-</html>
